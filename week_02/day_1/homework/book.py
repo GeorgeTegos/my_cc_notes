@@ -1,5 +1,5 @@
-from author import *
-from publisher import *
+from author import Author
+from publisher import Publisher
 
 class Book:
     
@@ -13,7 +13,7 @@ class Book:
         return ("The Books name is " +self.name+
                 "\nThe Author of the book is "+self.author+
                 "\nThe type of the book is"+self.type+
-                "\nThe publisher of th book is "+self.publisher)
+                "\nThe publisher of the book is "+self.publisher)
     
     def description_of_the_book (self):
         Author.write_book_description()
@@ -33,9 +33,19 @@ book_one = Book("The India Story","type one","Bimal Jalal","Rupa Publications In
 book_two = Book("Listen to Your Heart: The London Adventure","type two","Ruskin Bond","Penguin")
 book_three = Book("Business of Sports","type one","Vinit Karnik","Popular Prakashan")
 book_four = Book("A Place Called Home","type one","Preeti Shenoy","publisher someone")
-book_five = Book("Modi @20: Dreams Meeting Delivery","type two","VP Venkaiah Naidu","Rupa Publications India")
+book_five = Book("Modi @20: Dreams Meeting Delivery","type two","VP Venkaiah Naidu",
+                 "Rupa Publications India")
 
 # list_of_books = [book_one,book_two,book_three,book_four,book_five]
 
 print(Book.informations(book_five))
+print("#"*42)
+author_one = Author("Bimal Jalal",33,"India")
+print(author_one.author_informations())
+# print(Author.author_informations(book_five))
+
+
+
+
+
 

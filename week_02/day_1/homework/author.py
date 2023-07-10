@@ -1,8 +1,8 @@
 
 class Author:
 
-    def __init__(self, author,age,nationality):
-        self.name = author
+    def __init__(self, name,age,nationality):
+        self.name = name
         self.age = age
         self.nationality = nationality
     
