@@ -1,0 +1,7 @@
+Ls - list
+Mkdir - make directory
+Rm -rf - delete directory
+Cd - change directory
+Cd .. - go to parent directory
+Mv - move/rename folder/file
+
