@@ -32,7 +32,9 @@ class Bus:
         print(f"Number of passenger at stop: {num_of_passengers}")
 
     def passengers_list(self,passengers):
-        passengers_list =[]
+        # passengers_list = ""
+        passengers_list = []
         for item in passengers:
+            # passengers_list += " "+item.name
             passengers_list.append(item.name)
         return passengers_list
