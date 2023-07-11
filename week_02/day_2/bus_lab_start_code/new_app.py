@@ -59,6 +59,9 @@ print(f"The Bus stop now has {len(bus_stop.queue)} people in queue")
 
 print("#"*43)
 
+current_passengers_list = bus.passengers_list(bus.passengers)
+print(f"List of  current passengers names are: {current_passengers_list}")
+
 # print(bus.passengers)
 
 bus.empty()
