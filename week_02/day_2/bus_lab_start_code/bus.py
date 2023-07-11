@@ -8,7 +8,7 @@ class Bus:
         self.passengers = []
         pass
 
-    def drive(slef):
+    def drive(self):
         return "Brum Brum"
     
     def how_many_passenger(self):
@@ -26,6 +26,7 @@ class Bus:
     def collect_all_from_stop(self,people_to_pick_up):
         for person in people_to_pick_up:
             self.add_person(person)
+        people_to_pick_up.clear()
     
     def next_stop(self,num_of_passengers,len_of_queue):
         print(f"People waiting in the queue {len_of_queue}")
