@@ -11,6 +11,8 @@ print(leap_years)
 
 chicken_names = ["Hen Solo", "Cluck Norris", "Hennifer Lopez", "ChewPekka", "Feather Locklear"]
 new_list = [name for name in chicken_names if len(name)>10 and name[0]=="H"]
+# list_with_h = [name for name in chicken_names if name[0]== "H"]
+# list_with_len = [name for name in chicken_names if len(name)>10]
 print(new_list)
 
 
