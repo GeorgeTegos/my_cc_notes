@@ -28,14 +28,10 @@ class Bus:
             self.add_person(person)
         people_to_pick_up.clear()
     
-    def next_stop(self,num_of_passengers,len_of_queue):
-        print(f"People waiting in the queue {len_of_queue}")
-        print(f"Number of passenger at stop: {num_of_passengers}")
+    # def next_stop(self,num_of_passengers,len_of_queue):
+    #     print(f"People waiting in the queue {len_of_queue}")
+    #     print(f"Number of passenger at stop: {num_of_passengers}")
 
     def passengers_list(self,passengers):
-        # passengers_list = ""
-        passengers_list = []
-        for item in passengers:
-            # passengers_list += " "+item.name
-            passengers_list.append(item.name)
+        passengers_list = [item.name for item in passengers]
         return passengers_list
