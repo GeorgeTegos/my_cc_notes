@@ -1,6 +1,7 @@
 class BusStop:
 
     def __init__(self,name):
+        self.name = name
         self.queue = []
         
     def add_person_to_queue(self,person):
@@ -8,4 +9,3 @@ class BusStop:
 
     def remove_all_people_from_queue(self):
         self.queue.clear()
-        

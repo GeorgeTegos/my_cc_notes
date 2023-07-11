@@ -18,12 +18,13 @@ bus.add_person(passenger_three)
 
 
 bus.drop_passenger(passenger_three)
+print(bus.drive())
 
 # print(bus.how_many_passenger())
 # bus.empty()
 print(bus.how_many_passenger())
 
-print("#"*32)
+print("#"*43)
 
 bus_stop = BusStop("Ocean Terminal")
 
@@ -38,24 +39,27 @@ bus_stop_two.add_person_to_queue(passenger_seven)
 
 # print(bus.passengers)
 print(f"Number of passengers before bus stop {bus.how_many_passenger()}")
-bus.collect_all_from_stop(bus_stop.queue)
 
 
 print(f"People waiting in the queue {len(bus_stop.queue)}")
+bus.collect_all_from_stop(bus_stop.queue)
 bus_stop.remove_all_people_from_queue()
 print(f"Number of passenger at first stop: {bus.how_many_passenger()}")
-print(f"The Bus stop now has {len(bus_stop.queue)} people in queue")
+print(f"The {bus_stop.name} now has {len(bus_stop.queue)} people in queue")
+print(bus.drive())
 
 # bus.next_stop(bus.how_many_passenger(),len(bus_stop.queue))
 
 print("#"*43)
 
+print(f"Number of passengers before bus stop {bus.how_many_passenger()}")
 
 print(f"People waiting in the queue {len(bus_stop_two.queue)}")
 bus.collect_all_from_stop(bus_stop_two.queue)
 bus_stop_two.remove_all_people_from_queue()
 print(f"Number of passenger at second stop: {bus.how_many_passenger()}")
-print(f"The Bus stop now has {len(bus_stop.queue)} people in queue")
+print(f"The {bus_stop_two.name} now has {len(bus_stop.queue)} people in queue")
+print(bus.drive())
 
 print("#"*43)
 

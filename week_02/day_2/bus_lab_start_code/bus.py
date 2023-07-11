@@ -8,7 +8,7 @@ class Bus:
         self.passengers = []
         pass
 
-    def drive():
+    def drive(slef):
         return "Brum Brum"
     
     def how_many_passenger(self):
