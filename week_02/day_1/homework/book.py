@@ -45,7 +45,3 @@ print(author_one.author_informations())
 # print(Author.author_informations(book_five))
 
 
-
-
-
-
