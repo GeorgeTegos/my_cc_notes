@@ -13,9 +13,9 @@ class TestRoom(unittest.TestCase):
         self.song_two = Song("Bohemian")
 
         self.guest_one = Guest("George",100,"Bohemian")
-        self.guest_two = Guest("Nick",200,"Bohemian")
-        self.guest_three = Guest("Bill",300,"Bohemian")
-        self.guest_four= Guest("john",400,"Bohemian")
+        self.guest_two = Guest("Nick",200,"Sparta")
+        self.guest_three = Guest("Bill",300,"Back in black")
+        self.guest_four= Guest("john",400,"Thunder")
     
     def test_room_number(self):
         self.assertEqual(self.room_one.room_number,1)
