@@ -9,3 +9,6 @@ class Bar:
     def add_food_to_the_bar(self,food):
         self.bar_food_list.append(food)
 
+    def add_drink_to_the_bar(self,drink):
+        self.bar_drink_list.append(drink)
+

@@ -23,7 +23,6 @@ class TestGuest(unittest.TestCase):
 
     def test_cheer_for_favourite_song(self):
         self.room_one.add_song_to_room_playlist(self.song_one)
-        # self.room_one.add_song_to_room_playlist(self.song_two)
         self.assertEqual(self.guest_one.cheer_for_favourite_song(self.room_one.playist),"Whoo!")
 
     
