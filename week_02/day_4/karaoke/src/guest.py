@@ -6,6 +6,7 @@ class Guest:
         self.favourite_song = favourite_song
         self.spend = 0
     
-    def cheer_for_favourite_song(self,room):
-        if self.favourite_song in room[0].name_of_song:
-            return "Whoo!"
+    def cheer_for_favourite_song(self,room_playlist):
+        for song in room_playlist:
+            if self.favourite_song in song.name_of_song:
+                return "Whoo!"
