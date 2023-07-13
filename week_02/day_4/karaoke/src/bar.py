@@ -11,4 +11,16 @@ class Bar:
 
     def add_drink_to_the_bar(self,drink):
         self.bar_drink_list.append(drink)
+    
+    def sell_food_to_guest(self,guest,food):
+        guest.wallet -= food.price
+        self.add_money_to_till(food.price)
+
+    def sell_drink_to_guest(self,guest,drink):
+        guest.wallet -= drink.price
+        self.add_money_to_till(drink.price)
+
+    def add_money_to_till(self,amount):
+        self.bar_till += amount
+
 

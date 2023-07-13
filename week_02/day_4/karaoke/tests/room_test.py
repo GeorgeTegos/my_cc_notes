@@ -29,7 +29,7 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(len(self.room_one.list_of_guests),1)
 
     def test_remove_guest_from_room(self):
-        self.test_add_guest_to_room()
+        self.room_one.add_guest_to_room(self.guest_one)
         self.room_one.remove_guest_from_room(self.guest_one)
         self.assertEqual(len(self.room_one.list_of_guests), 0)
 
