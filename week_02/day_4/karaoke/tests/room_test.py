@@ -23,9 +23,14 @@ class TestRoom(unittest.TestCase):
     def test_room_capacity(self):
         self.assertEqual(self.room_one.capacity,3)
 
+    def test_number_of_guests(self):
+        self.room_one.add_guest_to_room(self.guest_four)
+        self.room_one.add_guest_to_room(self.guest_four)
+        self.room_one.add_guest_to_room(self.guest_four)
+        self.assertEqual(self.room_one.number_of_guests(),3)
+
     def test_add_guest_to_room(self):
         self.room_one.add_guest_to_room(self.guest_one)
-        # self.assertEqual(self.room_one.list_of_guests[0].name,"George")
         self.assertEqual(len(self.room_one.list_of_guests),1)
 
     def test_remove_guest_from_room(self):
@@ -41,7 +46,7 @@ class TestRoom(unittest.TestCase):
         self.room_one.add_guest_to_room(self.guest_one)
         self.room_one.add_guest_to_room(self.guest_two)
         self.room_one.add_guest_to_room(self.guest_three)
-        self.assertEqual(self.room_one.check_room_capacity(),False)
+        self.assertEqual(self.room_one.check_room_capacity(),True)
     
     
     
