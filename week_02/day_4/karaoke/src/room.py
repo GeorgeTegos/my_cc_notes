@@ -7,7 +7,8 @@ class Room:
         self.playist = []
 
     def add_guest_to_room(self,guest_to_add):
-        self.list_of_guests.append(guest_to_add)
+        if self.check_room_capacity() == True:
+            self.list_of_guests.append(guest_to_add)
 
     def remove_guest_from_room(self,guest_to_remove):
         self.list_of_guests.remove(guest_to_remove)
@@ -16,7 +17,7 @@ class Room:
         self.playist.append(song)
     
     def check_room_capacity(self):
-        if self.capacity >= len(self.list_of_guests):
+        if self.capacity > len(self.list_of_guests):
             return True
         else:
             return False
