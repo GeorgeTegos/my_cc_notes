@@ -2,6 +2,8 @@ import unittest
 from src.room import Room
 from src.song import Song
 from src.guest import Guest
+from src.bar import Bar
+from src.food import Food
 
 class TestRoom(unittest.TestCase):
     
@@ -16,6 +18,10 @@ class TestRoom(unittest.TestCase):
         self.guest_two = Guest("Nick",200,"Sparta")
         self.guest_three = Guest("Bill",300,"Back in black")
         self.guest_four= Guest("john",400,"Thunder")
+
+        self.main_bar = Bar("main",100)
+        self.food_one = Food("club",22)
+
     
     def test_room_number(self):
         self.assertEqual(self.room_one.room_number,1)
@@ -46,7 +52,17 @@ class TestRoom(unittest.TestCase):
         self.room_one.add_guest_to_room(self.guest_one)
         self.room_one.add_guest_to_room(self.guest_two)
         self.room_one.add_guest_to_room(self.guest_three)
-        self.assertEqual(self.room_one.check_room_capacity(),True)
+        self.assertEqual(self.room_one.check_room_capacity(),False)
+    
+    def test_total_room_charge(self):        
+        self.main_bar.add_food_to_room_charge(self.room_one,self.food_one)
+        self.room_one.room_charge_to_pay()
+        self.assertEqual(self.room_one.total_room_charge,22)
+
+    # def test_remove_with_room_charge_to_pay(self):
+    #     self.main_bar.add_food_to_room_charge(self.room_one,self.food_one)
+    #     self.room_one.room_charge_to_pay()
+
     
     
     

@@ -4,6 +4,7 @@ from src.bar import Bar
 from src.food import Food
 from src.drink import Drink
 from src.guest import Guest
+from src.room import Room
 
 class TestBar(unittest.TestCase):
 
@@ -18,6 +19,8 @@ class TestBar(unittest.TestCase):
 
         self.drink_one = Drink("Beer",5)
         self.drink_two = Drink("Whiskey",8)
+
+        self.room_one = Room(1,3)
 
 
 
@@ -40,3 +43,15 @@ class TestBar(unittest.TestCase):
         self.assertEqual(self.main_bar.bar_till,505)
         self.assertEqual(self.guest_one.wallet,95)
     
+    def test_add_money_to_till(self):
+        self.main_bar.add_money_to_till(10)
+        self.assertEqual(self.main_bar.bar_till,510)
+    
+    def test_add_food_to_room_charge(self):
+        # self.room_one.total_room_charge += (self.food_one.price)
+        self.main_bar.add_food_to_room_charge(self.room_one,self.food_one)
+        self.assertEqual(self.room_one.total_room_charge,10)
+
+    def test_add_drink_to_room_charge(self):
+        self.main_bar.add_drink_to_room_charge(self.room_one,self.drink_one)
+        self.assertEqual(self.room_one.total_room_charge,5)

@@ -10,3 +10,6 @@ class Guest:
         for song in room_playlist:
             if self.favourite_song in song.name_of_song:
                 return "Whoo!"
+    
+    def pay(self,amount):
+        self.wallet -= amount
