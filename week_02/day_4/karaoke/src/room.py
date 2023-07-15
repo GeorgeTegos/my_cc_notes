@@ -14,10 +14,12 @@ class Room:
             print(f"Sorry no space for more Guessts at room number {self.room_number}")
 
     def remove_guest_from_room(self,guest_to_remove):
-        # if self.room_charge_to_pay() != 0:
-        #     guest_to_remove.pay(self.room_charge_to_pay())
-        self.list_of_guests.remove(guest_to_remove)
-
+        if self.room_charge_to_pay() == 0:
+            self.list_of_guests.remove(guest_to_remove)        
+        else:
+            guest_to_remove.pay(self.room_charge_to_pay())
+            self.list_of_guests.remove(guest_to_remove)      
+        
 
     def add_song_to_room_playlist(self,song):
         self.playist.append(song)
@@ -27,12 +29,12 @@ class Room:
             return True
         else:
             return False
-
-    
+ 
     def number_of_guests(self):
         return len(self.list_of_guests)
     
     def room_charge_to_pay(self):
         return self.total_room_charge
+    
         
 

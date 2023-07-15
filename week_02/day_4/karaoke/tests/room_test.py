@@ -59,9 +59,12 @@ class TestRoom(unittest.TestCase):
         self.room_one.room_charge_to_pay()
         self.assertEqual(self.room_one.total_room_charge,22)
 
-    # def test_remove_with_room_charge_to_pay(self):
-    #     self.main_bar.add_food_to_room_charge(self.room_one,self.food_one)
-    #     self.room_one.room_charge_to_pay()
+    def test_remove_with_room_charge_to_pay(self):
+        self.room_one.add_guest_to_room(self.guest_one)
+        self.main_bar.add_food_to_room_charge(self.room_one,self.food_one)
+        self.room_one.remove_guest_from_room(self.guest_one)
+        self.assertEqual(len(self.room_one.list_of_guests),0)
+        self.assertEqual(self.guest_one.wallet,78)
 
     
     
