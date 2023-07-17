@@ -1,0 +1,26 @@
+.greeting {
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+    display: inline-block;
+    margin: 10px 20px 30px 15px;
+    border: 20px solid #2e1d15;
+    padding: 15px;
+    color: white;
+}
+
+.greeting.greeting--hello {
+    background-color: lightblue;
+}
+
+.greeting.greeting--goodbye{
+    background-color: darkseagreen;
+}
+
+.greeting__title {
+    color: red;
+}
+
+ol li {
+    color: orange;
+}
