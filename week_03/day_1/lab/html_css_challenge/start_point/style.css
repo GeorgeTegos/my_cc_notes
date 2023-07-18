@@ -14,11 +14,17 @@ header {
     display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 100px;
     justify-content: space-between;
     height: 35px;
     
 }
+
+.menu__nav{
+    border-left: 2px solid grey;
+    border-right: 2px solid grey;
+    padding: 0 20px 0 20px;    
+}
+
 .hn {
     color: white;
 }
@@ -77,7 +83,7 @@ header {
     color: #1d70b8;
 }
 
-.search{
+.search_area{
     width: 50%;
     font-size:5ch;
     padding-left: 130px;
@@ -108,4 +114,20 @@ footer h2 {
 footer{
     padding-left: 30px;
     padding-right: 30px;
+}
+
+.search__position {
+    display: flex;
+}
+
+.search__position .image{
+    width: 30px; 
+    height: 30px;
+}
+
+.search__position .search{
+    width: 300px; 
+    height: 30px;
+    border:2px solid black;
+    margin-right: -10px;
 }
