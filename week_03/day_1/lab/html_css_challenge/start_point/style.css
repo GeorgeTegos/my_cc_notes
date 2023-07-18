@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    background-color: black;
+    width: 100%;
+}
+
+.top {
+    background-color: black;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 100px;
+    justify-content: space-between;
+    height: 35px;
+    
+}
+.hn {
+    color: white;
+}
+
+.tophead {
+    height: 35px;
+    display: flex;
+    color: white;
+    padding-left: 25px;
+    gap: 10px;
+}
+
+.headerword {
+    align-self: center;
+}
+
+.menu {
+    color: white;
+    align-self: center;
+    font-size: large;
+    padding-right: 75px;
+}
+
+.bluebox {
+    background-color: #1d70b8;
+    height: 110px;
+    color: white;
+    padding: 55px 30px;
+    
+
+}
+
+.bluebox h3{
+    margin-top: 30px;
+}
+
+.greybox {
+    background-color: #f3f2f1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    padding-bottom: 30px;
+
+}
+
+.list{
+    font-size:larger;
+}
+
+.list li{
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.listblue {
+    color: #1d70b8;
+}
+
+.search{
+    width: 50%;
+    font-size:5ch;
+    padding-left: 130px;
+    padding-top: 10px;
+}
+
+.topics .topics__list .topics__item{
+    list-style: none;
+    justify-content: center;
+    width: calc((100% - 30px)/3);
+    height: 100px;
+    border: 1px solid black;
+
+}
+
+.topics .topics__list{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+footer h2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer{
+    padding-left: 30px;
+    padding-right: 30px;
+}
