@@ -7,3 +7,28 @@ h1 {
     display:inline;
     background-color: aquamarine;
 }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightcyan;
+    padding: 10px 25px 10px 15px;
+
+
+}
+nav > ul {
+    display: flex;
+    list-style: none;
+    gap:10px;
+}
+
+.index{
+    display: flex;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.index__main{
+    background-color: aqua;
+}

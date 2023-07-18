@@ -10,21 +10,29 @@
     />
 </head>
 <body>
-    Back to <a href="/">Home</a>
-    <nav>
-        <ul>Search by
-            <li><a href="/orders/date">Date</a></li>
-            <li><a href="/orders">Orders</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <span>Back to <a href="/">Home</a> </span>
+            <ul>Search by
+                <li><a href="/orders/date">Date</a></li>
+                <li><a href="/orders">Orders</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>Our orders list by {{ title }}</h1>
-    <ul>
-    {% for order in orders %}
-        <li>ID: {{ order.id }} <br> {{ title }}: {{ order.price }}
-        </li>    <br>
-    {% endfor %}
-    </ul>
+    <main>
+        <h1>Our orders list by {{ title }}</h1>
+        <ul>
+        {% for order in orders %}
+            <li>ID: {{ order.id }} <br> {{ title }}: {{ order.price }}
+            </li>    <br>
+        {% endfor %}
+        </ul>
+    </main>
+
+    <footer>
+
+    </footer>
 
 
 </body>
