@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    Back to <a href="/">Home</a>
+    <ul>Search by
+        <li><a href="/orders/date">Date</a></li>
+        <li><a href="/orders/price">Price</a></li>
+    </ul>
+
+    <h1>Our orders list is</h1>
+    <ul>
+    {% for order in orders %}
+        <li>Name: {{ order.customer_name }} <br>
+            Item: {{ order.item }} <br> 
+            Date: {{ order.order_date }} <br>
+            Price: {{ order.price }} <br>
+            Quantity: {{ order.quantity }} <br>
+            ID: {{ order.id }}
+        </li>    <br>
+    {% endfor %}
+    <br>
+    </ul>
+</body>
+</html>
