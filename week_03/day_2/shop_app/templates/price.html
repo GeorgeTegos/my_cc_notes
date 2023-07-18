@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='/style.css') }}"
+    />
 </head>
 <body>
     Back to <a href="/">Home</a>
-    <ul>Search by
-        <li><a href="/orders/date">Date</a></li>
-        <li><a href="/orders">Orders</a></li>
-    </ul>
+    <nav>
+        <ul>Search by
+            <li><a href="/orders/date">Date</a></li>
+            <li><a href="/orders">Orders</a></li>
+        </ul>
+    </nav>
 
     <h1>Our orders list by {{ title }}</h1>
     <ul>
