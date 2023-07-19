@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='/style.css') }}"
+    />
+</head>
+<body>
+    <header>
+        <nav>
+            <span>Back to <a href="/">Home</a> </span>
+            <ul>Search by
+                <li><a href="/orders/date">Date</a></li>
+                <li><a href="/orders/price">Price</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Our order is</h1>
+        <ul>
+            <li>
+                Name: {{ order.customer_name }} <br>
+                Item: {{ order.item }} <br> 
+                Date: {{ order.order_date }} <br>
+                Price: {{ order.price }} <br>
+                Quantity: {{ order.quantity }} <br>
+                ID: {{ order.id }}
+            </li><br>
+        <br>
+        </ul>
+    </main>
+
+    <footer>
+        <h3>Footer Area</h3>
+    </footer>
+</body>
+</html>

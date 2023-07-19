@@ -19,3 +19,7 @@ def orders_by_date():
 @orders_blueprint.route("/orders/price")
 def orders_by_price():
     return render_template("price.html",orders=orders_list,title = "Price")
+
+@orders_blueprint.route("/orders/<index_of_order>")
+def order_by_index(index_of_order):
+    return render_template("order.html",order=orders_list[int(index_of_order)],title="Orders")
