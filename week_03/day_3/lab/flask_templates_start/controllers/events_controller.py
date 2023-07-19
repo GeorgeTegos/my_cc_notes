@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, request
+from flask import render_template, Blueprint, request, redirect
 from models.event_list import events, Event
 
 events_blueprint = Blueprint("events", __name__)
@@ -32,3 +32,9 @@ def add_event():
     if event.name_of_event not in [event.name_of_event for event in events]:
         events.append(event)
     return render_template('index.jinja', title="My Task List", events=events)
+
+@events_blueprint.route('/events/<index>/delete', methods=["POST"])
+def remove_event(index):
+    print(index,type(index),len(events),[event.name_of_event for event in events])
+    del events[int(index)]
+    return redirect('/')
