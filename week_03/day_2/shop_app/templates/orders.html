@@ -29,7 +29,8 @@
                 Date: {{ order.order_date }} <br>
                 Price: {{ order.price }} <br>
                 Quantity: {{ order.quantity }} <br>
-                ID: {{ order.id }}
+                ID: {{ order.id }}<br>
+                <a href="/orders/{{ order.id }}">Link</a>
             </li>    <br>
         {% endfor %}
         <br>

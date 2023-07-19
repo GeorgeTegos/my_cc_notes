@@ -20,6 +20,12 @@ def orders_by_date():
 def orders_by_price():
     return render_template("price.html",orders=orders_list,title = "Price")
 
-@orders_blueprint.route("/orders/<index_of_order>")
-def order_by_index(index_of_order):
-    return render_template("order.html",order=orders_list[int(index_of_order)],title="Orders")
+@orders_blueprint.route("/orders/<id>")
+def order_by_index(id):
+    found_order= None
+    for order in orders_list:
+        if order.id == int(id):
+            found_order = order
+    if found_order == None:
+        return ('Page not found')
+    return render_template("order.html",order=found_order,title="Orders")
