@@ -4,7 +4,8 @@
 <ul>
   {% for event in events %}  
     <li>
-      <b>{{ event.name_of_event }}</b>: {{ event.description }} {% if event.recurring %}
+      <b>{{ event.name_of_event }}</b>: {{ event.description }} 
+      {% if event.recurring %}
         <span> &#9989;</span>
       {% endif %}
       <form action="/events/{{loop.index0}}/delete" method="post"><input type="submit" value="Delete"></form>
