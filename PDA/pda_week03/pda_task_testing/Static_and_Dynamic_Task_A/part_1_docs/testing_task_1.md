@@ -16,11 +16,6 @@ Only comment on errors that would stop the tests running.
 
 class CardGame:
 
-  # Missing our __init__ so we can assign attributes (value) to our objects
-  # In our case we need:
-  #  def __init__(self,value):
-  #    self.value = value
-
   def check_for_ace(self, card):
     if card.value = 1:  # needs double equal ( == ) for condition to check
       return True
@@ -29,14 +24,14 @@ class CardGame:
    
 
   dif highest_card(self, card1 card2): # Replace dif with def to create a function
-  if card1.value > card2.value:        # Add Comma ( , ) at line 31 between (card1 card2) 
+  if card1.value > card2.value:        # Add Comma ( , ) at line 26 between (card1 card2) 
     return card                        # replace card with card1
-  else:                                # From line 32 to line 35 we need indentation
+  else:                                # From line 27 to line 30 we need indentation
     return card2                       
   
 
 
-def cards_total(self, cards):
+def cards_total(self, cards): #This function block need indentation to be part of the class CardGame
   total           #We have to assign 0 to our variable total (total = 0) to have a start point 
   for card in cards:
     total += card.value
