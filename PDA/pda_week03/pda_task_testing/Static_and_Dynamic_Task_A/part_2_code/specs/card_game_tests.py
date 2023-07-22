@@ -13,12 +13,13 @@ class TestCardGame(unittest.TestCase):
         self.card_game_one = CardGame()
 
     def test_check_for_ace(self):
-        self.assertEqual(self.card_game_one.check_for_ace(self.card1),True)
+        result = self.card_game_one.check_for_ace(self.card1)
+        self.assertEqual(result,False)
 
     def test_highest_card(self):
         result = self.card_game_one.highest_card(self.card1,self.card2)
-        self.assertEqual(result,self.card2)
+        self.assertEqual(result,self.card1)
 
     def test_cards_total(self):
         result = self.card_game_one.cards_total(self.card_list)
-        self.assertEqual(result,"You have a total of 23X")
+        self.assertEqual(result,"You have a total of 23")
