@@ -32,6 +32,7 @@ def add_glove():
     size = request.form['size']
     colour = request.form['colour']
     price = request.form['price']
+    print(colour)
 
     glove = Glove(size=size, colour=colour, price=price)
 

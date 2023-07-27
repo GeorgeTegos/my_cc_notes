@@ -79,7 +79,6 @@ input[type="submit"]:hover {
     display: flex;
     flex-flow: wrap column;
     align-content: center;
-    
     gap: 4px;
 }
 

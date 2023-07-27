@@ -4,8 +4,8 @@
     {% for glove in gloves %}
         <li>ID: {{ glove.id }} <br>
         Glove Size: {{ glove.size }} <br>
-        Colour: {{ glove.colour }} <br>
-        Price: {{ glove.price }} <br>
+        Colour: <p style="background-color: {{ glove.colour }}">&nbsp</p> 
+        Price: £{{ glove.price }} <br>
         {% if glove.customer_id == Non %}
             Available: &#10004; <br>
         {% else %}
