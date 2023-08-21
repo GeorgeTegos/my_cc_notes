@@ -1,0 +1,11 @@
+h1 {
+    color: red;
+}   
+
+.event__title {
+    color: red;
+}
+
+.active{
+    color : green;
+}

@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: #2c2c32;
+  color: white;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.feed {
+  margin-top: 2rem;
+}
+
+.feed h1 {
+  margin-bottom: 2rem;
+}
+
+.post {
+  list-style-type: none;
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #2c2c32;
+}
+
+.post h3 {
+  margin-bottom: 0.5rem;
+}
+
+.post p {
+  line-height: 1.4rem;
+}
