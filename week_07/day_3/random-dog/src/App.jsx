@@ -16,6 +16,11 @@ function App() {
   //   .then(data => setDogImgUrl(data.message))
   // }
 
+  // const fetchCountries = async () =>{
+    
+  // }
+
+
   const showAllCountries = async () => {
     const response = await fetch("https://restcountries.com/v3.1/all")
     const data = await response.json()
