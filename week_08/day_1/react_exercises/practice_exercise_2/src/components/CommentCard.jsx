@@ -26,7 +26,6 @@ const Wrapper = styled.div`
  max-width: 60%;
  color: ${(props)=> (props.color ?props.color :"black")} ;
 
- /* background-color: grey; */
 `;
 
 const Comment = styled.p`
@@ -36,8 +35,6 @@ const Comment = styled.p`
 const RightBox = styled.div`
     
 `;
-
-// const dateX = dayjs(datePosted).format("YYYY/MM/DD")
 
 
 function CommentCard({userName, imageUrl, comment, datePosted}) {

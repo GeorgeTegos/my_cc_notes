@@ -21,12 +21,13 @@ function App() {
   ]);
 
   const cards = comments.map( (commentObj, i) => {
-    return(
-      <CommentCard key={i}
+    return(     
+    <CommentCard key={i}
         imageUrl={commentObj.imageUrl}
         userName={commentObj.userName}
         datePosted={commentObj.datePosted} 
         comment={commentObj.comment} />
+
     )
   } );
 
