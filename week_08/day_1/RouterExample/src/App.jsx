@@ -1,15 +1,27 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import {Routes, Route, Outlet, Link} from "react-router-dom"
 
 function App() {
+
+  const [beers, setBeers] = useState([])
+
+  useEffect(()=>{
+    fetchBeers()
+  }, [])
+
+  const fetchBeers = async () =>{
+    const res = await fetch("https://api.punkapi.com/v2/beers")
+    const data= await res.json()
+    setBeers(data)
+  }
 
   return (
     <div>
       <h1>React Router Example</h1>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />}/>
+          <Route index element={<Home title="Route 66 Beers" beers={beers}/>}/>
           <Route path="about" element={<About />}/>
           <Route path="dashboard" element={<Dashboard />}/>
           <Route path="*" element={<NoMatch />}/>
@@ -42,10 +54,16 @@ function Layout(){
 }
 
 
-function Home(){
+function Home({title, beers}){
+  const beerItems = beers.map((beer,i)=>{
+    return <li key={i}>{beer.name}</li>
+  })
   return (
     <div>
-      Home
+      <h2>{title}</h2>
+      <ul>
+        {beerItems}
+      </ul>
     </div>
   )
 }
