@@ -1,0 +1,11 @@
+*{
+  max-width: 1400px;
+  margin: 0px, auto;
+  padding: 0rem;
+
+}
+
+#root{
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
