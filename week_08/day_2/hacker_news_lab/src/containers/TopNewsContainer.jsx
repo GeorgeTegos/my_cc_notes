@@ -22,8 +22,7 @@ const TopNewsContainer = () => {
       Promise.all(topStoriesById).then((data)=> {
         setTopStories(data)
       })
-    }
-    ) //top20ids
+    }) //top20ids
     },[]) // useEffect
     
     const storiesToRender = (topStories) => {
