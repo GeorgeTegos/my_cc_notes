@@ -17,40 +17,21 @@ const teas = [
     { name: "Green", brand: "Clipper" }
 ]
 
+// initialise biscuits data
+const biscuits = [
+    {name: "Chocolate Chip", calories:"100"},
+    {name: "Vanilla Chip", calories:"90"},
+    {name: "Hazelnut", calories:"130"},
+    {name: "Strawberry", calories:"90"},
+
+]
+
+
 const teasRouter = createRouter(teas)
 app.use('/api/teas', teasRouter)
 
-//Get all teas
-app.get('/api/teas',(req, res)=>{
-    // res.send("test")
-    res.json(teas)
-})
-
-
-//Get Individual Tea (GET)
-app.get('/api/teas/:id',(req,res)=>{
-    res.json(teas[req.params.id])
-})
-
-//Create a new tea (POST)
-app.post('/api/teas',(req,res)=>{
-    teas.push(req.body)
-    res.json(teas)
-})
-
-//Delete tea      (DELETE)
-app.delete('/api/teas/:id',(req,res)=>{
-    teas.splice(req.params.id, 1)
-    res.json(teas)
-})
-
-//Update Tea    (PUT)
-app.put('/api/teas/:id',(req,res)=>{
-    teas[req.params.id] = req.body
-    res.json(teas)
-})
-
-
+const biscuitsRouter = createRouter(biscuits)
+app.use('/api/biscuits', biscuitsRouter)
 
 
 
