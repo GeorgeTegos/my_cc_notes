@@ -1,5 +1,7 @@
 package com.codebase;
 
+import java.text.MessageFormat;
+
 public class Booking {
     private String name;
     private int numberOfPeople;
@@ -11,8 +13,7 @@ public class Booking {
         this.phone = phone;
         this.confirmed = false;
     }
-
-
+    
     public String BookingInfo(){
         String bookingStatus;
         if(this.confirmed){
@@ -20,7 +21,12 @@ public class Booking {
         } else {
              bookingStatus = "Booking Not Confirmed Yet";
         }
-        return String.format("Booking for %s \n For %d people.\nPhone: %d \n %s",this.name,this.numberOfPeople,this.phone,bookingStatus);
+        return String.format("__________" +
+                "\nBooking for %s " +
+                "\nFor %d people." +
+                "\nPhone: %d " +
+                "\n%s" +
+                "\n____________",this.name,this.numberOfPeople,this.phone,bookingStatus);
     }
 
     public void ChangeBookingStatus(){
