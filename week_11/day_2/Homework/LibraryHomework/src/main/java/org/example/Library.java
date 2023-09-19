@@ -2,7 +2,6 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Objects;
 
 public class Library {
 
@@ -37,11 +36,7 @@ public class Library {
     }
 
     public boolean enoughCapacityToAddABook() {
-        if(countTheBooks()<getLibraryCapacity()){
-            return true;
-        }else {
-            return false;
-        }
+        return countTheBooks() < getLibraryCapacity();
     }
 
     public int findAmountOfBooksByGenre(String genre) {
@@ -58,15 +53,15 @@ public class Library {
     }
 
     public void createHashMap() {
-        // Does it stays here ?
-        //Do i have to move it in the above function ?
-        // Should be private?
-        for(int i=0;i < this.booksInLibrary.size(); i++){
-            if(!this.amountOfBooksByGenre.containsKey(booksInLibrary.get(i).getGenre())){
-                this.amountOfBooksByGenre.put(booksInLibrary.get(i).getGenre(),1);
-            }else{
-                int previous = this.amountOfBooksByGenre.get(booksInLibrary.get(i).getGenre());
-                this.amountOfBooksByGenre.put(booksInLibrary.get(i).getGenre(),previous+1);
+        // Does it stay here ?
+        //Do I have to move it in the above function ?
+        // Should this method be a private?
+        for (Book book : this.booksInLibrary) {
+            if (!this.amountOfBooksByGenre.containsKey(book.getGenre())) {
+                this.amountOfBooksByGenre.put(book.getGenre(), 1);
+            } else {
+                int previous = this.amountOfBooksByGenre.get(book.getGenre());
+                this.amountOfBooksByGenre.put(book.getGenre(), previous + 1);
             }
         }
     }

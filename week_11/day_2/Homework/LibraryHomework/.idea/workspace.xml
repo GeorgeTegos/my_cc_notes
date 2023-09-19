@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="162137a9-fa52-40c0-af11-69ea23fbc8eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Borrower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BorrowerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/LibraryTest.java" afterDir="false" />
+    <list default="true" id="162137a9-fa52-40c0-af11-69ea23fbc8eb" name="Changes" comment="End of HomeWork">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Library.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +71,25 @@
       <option name="presentableId" value="Default" />
       <updated>1695140159041</updated>
     </task>
+    <task id="LOCAL-00001" summary="End of HomeWork">
+      <created>1695160932503</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695160932503</updated>
+    </task>
+    <task id="LOCAL-00002" summary="End of HomeWork">
+      <created>1695160989000</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695160989000</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="End of HomeWork" />
+    <option name="LAST_COMMIT_MESSAGE" value="End of HomeWork" />
   </component>
 </project>
