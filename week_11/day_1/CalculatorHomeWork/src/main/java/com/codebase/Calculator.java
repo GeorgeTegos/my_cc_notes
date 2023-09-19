@@ -1,8 +1,6 @@
 package com.codebase;
 
 public class Calculator {
-    private int intOne;
-    private int intTwo;
 
     public int add(int numberOne, int numberTwo){
         return numberOne + numberTwo;

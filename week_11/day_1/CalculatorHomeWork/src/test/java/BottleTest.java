@@ -3,7 +3,7 @@ import org.junit.Before;
 import com.codebase.Bottle;
 import static org.junit.Assert.assertEquals;
 public class BottleTest {
-    Bottle bottle;
+    private Bottle bottle;
 
     @Before
     public void before(){
@@ -16,7 +16,7 @@ public class BottleTest {
     }
 
     @Test
-    public void canDrink(){
+    public void testDrink(){
         bottle.drink();
         assertEquals(90,bottle.getVolume());
     }
