@@ -24,4 +24,11 @@ public class NumbersList {
     public int getNumberAtIndex(int index) {
         return this.getNumbers().get(index);
     }
+
+    public void multiplyNumberByTwo(){
+        for(int i=0; i < this.getSize(); i++){
+            this.getNumbers().set(i,this.getNumberAtIndex(i)*2);
+        }
+    }
+
 }
