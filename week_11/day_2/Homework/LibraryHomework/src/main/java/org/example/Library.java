@@ -55,6 +55,7 @@ public class Library {
     }
 
     public void createHashMap() {
+        this.amountOfBooksByGenre.clear();
         for (Book book : this.booksInLibrary) {
             if (!this.amountOfBooksByGenre.containsKey(book.getGenre())) {
                 this.amountOfBooksByGenre.put(book.getGenre(), 1);
