@@ -41,7 +41,9 @@ public class Library {
 
     public int findAmountOfBooksByGenre(String genre) {
         this.createHashMap();
-        return this.amountOfBooksByGenre.get(genre);
+        int result = this.amountOfBooksByGenre.get(genre);
+        this.amountOfBooksByGenre.clear();
+        return result;
 //        int count =0;
 //        for(int i =0; i < this.booksInLibrary.size();i++){
 //            if(Objects.equals(booksInLibrary.get(i).getGenre(), genre)){
