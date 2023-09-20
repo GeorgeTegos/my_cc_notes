@@ -9,16 +9,22 @@ public class Library {
     private ArrayList<Book> booksInLibrary;
     private int libraryCapacity;
     private HashMap<String , Integer> amountOfBooksByGenre;
+    private ArrayList<Borrower> listOfBorrowers;
 
     public Library(String name,int capacity){
         this.libraryName = name;
         this.booksInLibrary = new ArrayList<>();
         this.libraryCapacity = capacity;
         this.amountOfBooksByGenre = new HashMap<>();
+        this.listOfBorrowers = new ArrayList<>();
     }
 
     public HashMap<String, Integer> getAmountOfBooksByGenre() {
         return amountOfBooksByGenre;
+    }
+
+    public ArrayList<Borrower> getListOfBorrowers() {
+        return listOfBorrowers;
     }
 
     public int getLibraryCapacity() {
@@ -39,25 +45,16 @@ public class Library {
         return countTheBooks() < getLibraryCapacity();
     }
 
+    public void borrowABook(Book book,Borrower borrower){
+        this.booksInLibrary.add(book);
+        this.listOfBorrowers.add(borrower);
+    }
+
     public int findAmountOfBooksByGenre(String genre) {
-        this.createHashMap();
-        int result = this.amountOfBooksByGenre.get(genre);
-        this.amountOfBooksByGenre.clear();
-        return result;
-//        int count =0;
-//        for(int i =0; i < this.booksInLibrary.size();i++){
-//            if(Objects.equals(booksInLibrary.get(i).getGenre(), genre)){
-//                this.amountOfBooksByGenre.put(genre,1);
-//                count++;
-//            }
-//        }
-//        return count;
+        return this.amountOfBooksByGenre.get(genre);
     }
 
     public void createHashMap() {
-        // Does it stay here ?
-        //Do I have to move it in the above function ?
-        // Should this method be a private?
         for (Book book : this.booksInLibrary) {
             if (!this.amountOfBooksByGenre.containsKey(book.getGenre())) {
                 this.amountOfBooksByGenre.put(book.getGenre(), 1);

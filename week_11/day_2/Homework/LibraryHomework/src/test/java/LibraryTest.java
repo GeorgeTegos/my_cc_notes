@@ -1,3 +1,4 @@
+import org.example.Borrower;
 import org.example.Library;
 import org.example.Book;
 import org.junit.Before;
@@ -12,6 +13,7 @@ public class LibraryTest {
     private Book bookOne;
     private Book bookTwo;
     private Book bookThree;
+    private Borrower george;
 
 
     @Before
@@ -21,6 +23,8 @@ public class LibraryTest {
         bookOne = new Book("Book Title One","Book Author One","Comedy");
         bookTwo = new Book("Book Title Two","Book Author Two","Comedy");
         bookThree = new Book("Book Title Three","Book Author Three","Horror");
+
+        george= new Borrower("George");
     }
 
     @Test
@@ -49,6 +53,7 @@ public class LibraryTest {
         this.publicLibrary.addBook(bookOne);
         this.publicLibrary.addBook(bookTwo);
         this.publicLibrary.addBook(bookThree);
+        this.publicLibrary.createHashMap();
         assertEquals(2,publicLibrary.findAmountOfBooksByGenre("Comedy"));
     }
 
@@ -65,6 +70,11 @@ public class LibraryTest {
 
         this.publicLibrary.createHashMap();
         assertEquals(expecting,publicLibrary.getAmountOfBooksByGenre());
+    }
 
+    @Test
+    public void testBorrwingABook(){
+        this.publicLibrary.borrowABook(bookOne,george);
+        assertEquals(1,this.publicLibrary.getListOfBorrowers().size());
     }
 }
