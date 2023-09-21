@@ -2,19 +2,25 @@ package com.codebase;
 
 public class Calculator {
 
-    public int add(int numberOne, int numberTwo){
+    private static double Pi = 3.14;
+
+    public static int add(int numberOne, int numberTwo){
         return numberOne + numberTwo;
     }
 
-    public int subtract(int numberOne, int numberTwo){
+    public static double add(double firstNumber, double secondNumber){
+        return firstNumber + secondNumber;
+    }
+
+    public static int subtract(int numberOne, int numberTwo){
         return numberOne - numberTwo;
     }
 
-    public int multiply(int numberOne, int numberTwo){
+    public static int multiply(int numberOne, int numberTwo){
         return numberOne * numberTwo;
     }
 
-    public double divide(double numberOne, double numberTwo){
+    public static double divide(double numberOne, double numberTwo){
         return numberOne / numberTwo;
     }
 }
