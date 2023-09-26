@@ -24,20 +24,18 @@ public class WeaponTest {
 
     @Test
     public void swordCanAttack(){
-        assertEquals(30,this.sword.attack());
-        int afterCombat = enemy.getHealthPoints()-this.sword.attack();
-        assertEquals(70,afterCombat);
+        this.sword.attack(enemy);
+        assertEquals(70,enemy.getHealthPoints());
+
     }
     @Test
     public void AxeCanAttack(){
-        assertEquals(40,this.axe.attack());
-        int afterCombat = enemy.getHealthPoints()-this.axe.attack();
-        assertEquals(60,afterCombat);
+        this.axe.attack(enemy);
+        assertEquals(60,enemy.getHealthPoints());
     }
     @Test
     public void ClubCanAttack(){
-        assertEquals(28,this.club.attack());
-        int afterCombat = enemy.getHealthPoints()-this.club.attack();
-        assertEquals(72,afterCombat);
+        this.club.attack(enemy);
+        assertEquals(72,this.enemy.getHealthPoints());
     }
 }

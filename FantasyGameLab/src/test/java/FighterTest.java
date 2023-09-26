@@ -1,6 +1,6 @@
+import org.example.classes.Barbarian;
 import org.example.player.Fighter;
 import org.example.weapons.Axe;
-import org.example.weapons.IWeapons;
 import org.example.weapons.Sword;
 import org.example.weapons.Weapon;
 import org.junit.Before;
@@ -13,7 +13,7 @@ public class FighterTest {
     @Before
     public void before(){
         weapon = new Sword(30);
-        fighter = new Fighter("Connan",200, weapon);
+        fighter = new Barbarian("Connan",200, weapon);
     }
 
     @Test

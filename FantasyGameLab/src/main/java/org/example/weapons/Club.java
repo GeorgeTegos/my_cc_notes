@@ -1,13 +1,15 @@
 package org.example.weapons;
 
+import org.example.enemy.Enemy;
+
 public class Club extends Weapon{
 
     public Club(int damage) {
         super(damage);
     }
 
-    @Override
-    public int attack() {
-        return this.getDamage();
+
+    public void attack(Enemy enemy) {
+        enemy.setHealthPoints(enemy.getHealthPoints()-this.getDamage());
     }
 }

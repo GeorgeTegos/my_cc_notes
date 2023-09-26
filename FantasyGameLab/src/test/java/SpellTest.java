@@ -1,3 +1,4 @@
+import org.example.classes.Warlock;
 import org.example.classes.Wizard;
 import org.example.enemy.Enemy;
 import org.example.enemy.Orc;
@@ -24,25 +25,20 @@ public class SpellTest {
 
         spell = new Fireball(30);
         defender = new Dragon();
-        mage = new Mage("Harry", 100,spell);
+        mage = new Warlock("Harry", 100,spell);
         enemy = new Orc(100);
     }
 
     @Test
     public void mageCastSpell(){
-        int newEnemyHP = enemy.getHealthPoints() - this.mage.getSpell().cast();
-        enemy.setHealthPoints(newEnemyHP);
+        this.mage.cast(enemy);
         assertEquals(70,enemy.getHealthPoints());
     }
 
     @Test
     public void defenderCanDefend(){
-        int newEnemyHp = enemy.getHealthPoints() - this.mage.defend(defender);
-        enemy.setHealthPoints(newEnemyHp);
-        assertEquals(65,enemy.getHealthPoints());
-
-
-
+        this.mage.cast(enemy);
+        assertEquals(70,enemy.getHealthPoints());
     }
 
 

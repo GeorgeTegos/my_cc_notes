@@ -1,13 +1,13 @@
 package org.example.player;
 
 import org.example.IDefend;
+import org.example.enemy.Enemy;
 import org.example.spells.ISpell;
 import org.example.spells.Spell;
 import org.example.summons.Defender;
 
-public class Mage extends Player implements IDefend, ISpell {
+public abstract class Mage extends Player implements ISpell, IDefend {
     private Spell spell;
-    private Defender defender;
 
     public Mage(String name, int healthPoints, Spell spell) {
         super(name, healthPoints);
@@ -22,15 +22,15 @@ public class Mage extends Player implements IDefend, ISpell {
         this.spell = spell;
     }
 
-    @Override
-    public int cast() {
-        return 0;
+
+    public void cast(Enemy enemy) {
+        enemy.setHealthPoints(enemy.getHealthPoints() - spell.getPower());
     }
 
-    @Override
-    public int defend(Defender defender) {
-        return defender.getPower();
+    public void defend(Enemy enemy, Defender defender){
+       defender.defend(enemy);
     }
-
-
 }
+
+
+

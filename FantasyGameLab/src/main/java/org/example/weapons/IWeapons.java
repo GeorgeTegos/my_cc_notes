@@ -1,6 +1,8 @@
 package org.example.weapons;
 
+import org.example.enemy.Enemy;
+
 public interface IWeapons {
 
-    public int attack();
+    public void attack(Enemy enemy);
 }
