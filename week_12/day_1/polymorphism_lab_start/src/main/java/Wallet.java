@@ -2,19 +2,10 @@ import java.util.ArrayList;
 
 public class Wallet {
     private String name;
-    private ArrayList<CreditCard> creditCards;
-    private ArrayList<DebitCard> debitCards;
-    private ArrayList<LoyaltyCard> loyaltyCards;
-    private ArrayList<Ticket> tickets;
-
     private ArrayList<IScan> cards;
 
     public Wallet(String name) {
         this.name = name;
-        this.creditCards = new ArrayList<CreditCard>();
-        this.debitCards = new ArrayList<DebitCard>();
-        this.loyaltyCards = new ArrayList<LoyaltyCard>();
-        this.tickets = new ArrayList<Ticket>();
         this.cards = new ArrayList<IScan>();
     }
 

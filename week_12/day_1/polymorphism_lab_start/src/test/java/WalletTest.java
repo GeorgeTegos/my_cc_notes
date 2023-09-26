@@ -31,29 +31,6 @@ public class WalletTest {
         assertEquals(0, wallet.getNumberOfItems());
     }
 
-//    @Test
-//    public void canAddCreditCardToWallet() {
-//        wallet.addItem(creditCard);
-//        assertEquals(1, wallet.getNumberOfItems());
-//    }
-//
-//    @Test
-//    public void canAddDebitCardToWallet() {
-//        wallet.addItem(debitCard);
-//        assertEquals(1, wallet.getNumberOfItems());
-//    }
-//
-//    @Test
-//    public void canAddLoyaltyCardToWallet() {
-//        wallet.addItem(loyaltyCard);
-//        assertEquals(1, wallet.getNumberOfItems());
-//    }
-//
-//    @Test
-//    public void canAddTicketCardToWallet() {
-//        wallet.addItem(ticket);
-//        assertEquals(1, wallet.getNumberOfItems());
-//    }
 
     @Test
     public void canAddEverythingToWallet() {
