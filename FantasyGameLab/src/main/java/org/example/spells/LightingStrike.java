@@ -1,5 +1,7 @@
 package org.example.spells;
 
+import org.example.enemy.Enemy;
+
 public class LightingStrike extends Spell{
 
     public LightingStrike(int power) {
@@ -7,8 +9,8 @@ public class LightingStrike extends Spell{
     }
 
     @Override
-    public int cast() {
-        return this.getPower();
+    public void cast(Enemy enemy) {
+        enemy.setHealthPoints(enemy.getHealthPoints() - this.getPower());
 
     }
 }

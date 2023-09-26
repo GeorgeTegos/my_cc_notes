@@ -10,4 +10,5 @@ public abstract class Weapon implements IWeapons {
     public int getDamage() {
         return damage;
     }
+
 }

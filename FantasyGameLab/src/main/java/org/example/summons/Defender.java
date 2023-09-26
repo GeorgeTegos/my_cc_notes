@@ -1,6 +1,7 @@
 package org.example.summons;
 
 import org.example.IDefend;
+import org.example.enemy.Enemy;
 
 public class Defender implements IDefend {
         private int power;
@@ -16,8 +17,9 @@ public class Defender implements IDefend {
         this.power = power;
     }
 
-    @Override
-    public int defend(Defender defender) {
-        return defender.getPower();
+
+    public void defend(Enemy enemy) {
+            enemy.setHealthPoints(enemy.getHealthPoints() - this.getPower());
+
     }
 }

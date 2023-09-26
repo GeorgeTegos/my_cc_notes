@@ -1,8 +1,9 @@
 package org.example;
 
+import org.example.enemy.Enemy;
 import org.example.summons.Defender;
 
 public interface IDefend {
-    public int defend(Defender defender);
+    public void defend(Enemy enemy);
 
 }

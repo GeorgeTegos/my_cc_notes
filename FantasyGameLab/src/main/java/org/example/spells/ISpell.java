@@ -1,5 +1,7 @@
 package org.example.spells;
 
+import org.example.enemy.Enemy;
+
 public interface ISpell {
-    public int cast();
+    public void cast(Enemy enemy);
 }
