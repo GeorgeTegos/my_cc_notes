@@ -1,3 +1,5 @@
+import org.example.enemy.Enemy;
+import org.example.enemy.Orc;
 import org.example.weapons.Axe;
 import org.example.weapons.Club;
 import org.example.weapons.Sword;
@@ -10,9 +12,11 @@ public class WeaponTest {
     private Sword sword;
     private Axe axe;
     private Club club;
+    private Enemy enemy;
 
     @Before
     public void before(){
+        enemy = new Orc(100);
         sword = new Sword(30);
         club = new Club(28);
         axe = new Axe(40);
@@ -20,17 +24,20 @@ public class WeaponTest {
 
     @Test
     public void swordCanAttack(){
-        String expect = "I can attack for 30 Damage!";
-        assertEquals(expect,this.sword.attack());
+        assertEquals(30,this.sword.attack());
+        int afterCombat = enemy.getHealthPoints()-this.sword.attack();
+        assertEquals(70,afterCombat);
     }
     @Test
     public void AxeCanAttack(){
-        String expect = "I can attack for 40 Damage!";
-        assertEquals(expect,this.axe.attack());
+        assertEquals(40,this.axe.attack());
+        int afterCombat = enemy.getHealthPoints()-this.axe.attack();
+        assertEquals(60,afterCombat);
     }
     @Test
     public void ClubCanAttack(){
-        String expect = "I can attack for 28 Damage!";
-        assertEquals(expect,this.club.attack());
+        assertEquals(28,this.club.attack());
+        int afterCombat = enemy.getHealthPoints()-this.club.attack();
+        assertEquals(72,afterCombat);
     }
 }

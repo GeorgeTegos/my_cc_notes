@@ -7,7 +7,7 @@ public class Club extends Weapon{
     }
 
     @Override
-    public String attack() {
-        return "I can attack for "+ this.getDamage() + " Damage!";
+    public int attack() {
+        return this.getDamage();
     }
 }

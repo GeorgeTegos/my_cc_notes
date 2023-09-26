@@ -4,19 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="859d282f-835c-483e-ae43-9686c6ad2004" name="Changes" comment="FantasyGameLab init commit">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/enemy/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/enemy/Orc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/enemy/Troll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/player/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/weapons/IWeapons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/weapons/Sword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/weapons/Weapon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/WeaponTest.java" afterDir="false" />
+    <list default="true" id="859d282f-835c-483e-ae43-9686c6ad2004" name="Changes" comment="Weapon classes + Testing">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/IDefend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/Barbarian.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/Dwarf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/Knight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/Warlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/Wizard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/player/Fighter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/player/Mage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/spells/Fireball.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/spells/Frostball.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/spells/ISpell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/spells/LightingStrike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/spells/Spell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/summons/Defender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/summons/Dragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/summons/Ogre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/FighterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SpellTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weapons/Axe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weapons/Axe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weapons/Club.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weapons/Club.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weapons/IWeapons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weapons/IWeapons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weapons/Sword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weapons/Sword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WeaponTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WeaponTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,12 +78,20 @@
       <option name="project" value="LOCAL" />
       <updated>1695729695418</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Weapon classes + Testing">
+      <created>1695730870668</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695730870668</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="FantasyGameLab init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="FantasyGameLab init commit" />
+    <MESSAGE value="Weapon classes + Testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Weapon classes + Testing" />
   </component>
 </project>
