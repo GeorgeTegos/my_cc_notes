@@ -1,6 +1,7 @@
+#Backend REST API setup
+
+
 Repository pattern
-
-
 ORM -> Hibernate (JPA spec)
 
 
@@ -25,7 +26,7 @@ Spring Start ;
 
 ____________________________________
 
-com.example..... \n
+com.example.....
 * controllers (Package)
     - |- modelController (Class)
 
@@ -87,7 +88,7 @@ Every Model has to be in Repository
 Repositories should always be Interface
 ______________________________
 
-//JpaRepository is kinda like a HashMap
+JpaRepository is kinda like a HashMap
 
 Repository
 
@@ -141,12 +142,7 @@ class PirateserviceApplicationTests {
 ```
 ______________________________
 
-
 @Autowired  -> Dependency injection (making a "instance" for us , can be interface)
-
-
-
-
 
 REST API Controller
 _________________________________
