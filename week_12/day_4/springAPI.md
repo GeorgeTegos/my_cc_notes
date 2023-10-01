@@ -37,8 +37,8 @@ com.example..... \n
 
 * nameApplication
 
-Resources (Folder)
-* application.properties
+* Resources (Folder)
+    - application.properties
 
 
 * Testing (Folder)
