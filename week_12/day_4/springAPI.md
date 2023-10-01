@@ -26,22 +26,22 @@ Spring Start ;
 ____________________________________
 
 com.example..... \n
-1. |- controllers
+* controllers (Package)
     - |- modelController (Class)
 
-1. |- models \n
+* models (Package)
     - |- modelClass (Class)
 
-1. |- Repositories\n
+* Repositories (Package)
     - |- modelRepository (Interface)
 
-1. |- nameApplication
+* nameApplication
 
-Resources\n
-1. |- application.properties
+Resources (Folder)
+* application.properties
 
 
-1. Testing
+* Testing (Folder)
     - |- testFiles
 
 ____________________________________
