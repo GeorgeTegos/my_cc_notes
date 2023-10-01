@@ -7,9 +7,9 @@ ORM -> Hibernate (JPA spec)
 Spring Start ;
 1. Spring initialiser
   - Spring Web ( https://start.spring.io/ )
-  1. PostgreSQL Driver
-  1. Spring Data JpaRepository
-  1. SpringBoot DevTools
+  * PostgreSQL Driver
+  * Spring Data JpaRepository
+  * SpringBoot DevTools
 1. application.properties
     - Datasource and Postgres settings
     1. spring.datasource.url=jdbc:postgresql://localhost:5432/{DBNAME}
