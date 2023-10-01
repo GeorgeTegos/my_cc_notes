@@ -11,16 +11,16 @@ Spring Start ;
   1.c)Spring Data JpaRepository
   1.d)SpringBoot DevTools
 2) application.properties
-    -Datasource and Postgres settings
-    spring.datasource.url=jdbc:postgresql://localhost:5432/{DBNAME}
-    spring.datasource.username=user
-    spring.datasource.password=
-    spring.jpa.hibernate.ddl-auto=update
-    spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
-    spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
-3)Models
-4)Repositories
-5)RestController
+    -Datasource and Postgres settings \n
+    spring.datasource.url=jdbc:postgresql://localhost:5432/{DBNAME}\n
+    spring.datasource.username=user\n
+    spring.datasource.password=\n
+    spring.jpa.hibernate.ddl-auto=update\n
+    spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect /n
+    spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true /n
+3)Models \n
+4)Repositories \n
+5)RestController \n
 
 
 com.example.....
