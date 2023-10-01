@@ -6,37 +6,37 @@ ORM -> Hibernate (JPA spec)
 
 Spring Start ;
 1. Spring initialiser
-  - Spring Web ( https://start.spring.io/ )
-  * PostgreSQL Driver
-  * Spring Data JpaRepository
-  * SpringBoot DevTools
+    - Spring Web ( https://start.spring.io/ )
+    * PostgreSQL Driver
+    * Spring Data JpaRepository
+    * SpringBoot DevTools
 1. application.properties
-    - Datasource and Postgres settings
-    1. spring.datasource.url=jdbc:postgresql://localhost:5432/{DBNAME}
-    1. spring.datasource.username=user
-    1. spring.datasource.password=
-    1. spring.jpa.hibernate.ddl-auto=update
-    1. spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
-    1. spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
+    - // Datasource and Postgres settings
+    * spring.datasource.url=jdbc:postgresql://localhost:5432/{DBNAME}
+    * spring.datasource.username=user
+    * spring.datasource.password=
+    * spring.jpa.hibernate.ddl-auto=update
+    * spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
+    * spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
 1. Models
 1. Repositories
 1. RestController
 
 
-com.example.....
-  |- controllers \n
-    |- modelController (Class)
+com.example..... \n
+1. |- controllers
+  - |- modelController (Class)
 
-  |- models \n
-    |- modelClass (Class)
+1. |- models \n
+  - |- modelClass (Class)
 
-  |- Repositories\n
-    |- modelRepository (Interface)
+1. |- Repositories\n
+  - |- modelRepository (Interface)
 
-  |- nameApplication
+1. |- nameApplication
 
 Resources\n
-  |- application.properties
+1. |- application.properties
 
 
 Testing\n
