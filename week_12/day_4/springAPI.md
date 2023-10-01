@@ -1,7 +1,17 @@
+Repository pattern
+
+
+ORM -> Hibernate (JPA spec)
+
+
 Spring Start ;
 1) Spring initialiser
+  1.a)Spring Web
+  1.b)PostgreSQL Driver
+  1.c)Spring Data JpaRepository
+  1.d)SpringBoot DevTools
 2) application.properties
-    # Datasource and Postgres settings
+    -Datasource and Postgres settings
     spring.datasource.url=jdbc:postgresql://localhost:5432/{DBNAME}
     spring.datasource.username=user
     spring.datasource.password=
@@ -14,33 +24,30 @@ Spring Start ;
 
 
 com.example.....
-  |- controllers
+  |- controllers \n
     |- modelController (Class)
 
-  |- models
+  |- models \n
     |- modelClass (Class)
 
-  |- Repositories
+  |- Repositories\n
     |- modelRepository (Interface)
 
   |- nameApplication
 
-Resources
+Resources\n
   |- application.properties
 
 
-Testing
+Testing\n
   |- testFiles
 
 
-Repository pattern
 
+MODEL
+__________________________
 
-ORM -> Hibernate (JPA spec)
-
-
-MODEL _____________\\
-
+```
 @Entity
 @Table(name="XXX")
 public class NAME{
@@ -65,7 +72,8 @@ public class NAME{
 
     getters + setters
 }
-______________________________//
+```
+______________________________
 
 
 
@@ -79,23 +87,27 @@ Repositories should always be Interface
 
 
 
-Repository_____________________\\
+Repository
+______________________________
 
 //JpaRepository is kinda like a HashMap
 
+```
 @Repository
 public interface INTERFACE_NAME extends JpaRepository<Pirate, Long>{
 
-
 }
-
-_______________________________//
-
-
+```
+_______________________________
 
 
 
-Testing __________________________\\
+
+
+Testing
+_______________________________
+
+```
 
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -127,30 +139,28 @@ class PirateserviceApplicationTests {
 
 	}
 }
-
-______________________________//
-
-
+```
+______________________________
 
 
-@Autowired  -> Dependency injection (making a "instance" for us , can be interface)
+\\@Autowired  -> Dependency injection (making a "instance" for us , can be interface)
 
 
 
 
 
 REST API Controller
-_________________________________ \\
-@GetMapping       GET
-@PostMapping      CREATE
-@DeleteMapping    DELETE
-@PutMapping       UPDATE
-@PatchMapping
+_________________________________
+@GetMapping       GET \n
+@PostMapping      CREATE \n
+@DeleteMapping    DELETE \n
+@PutMapping       UPDATE \n
+@PatchMapping \n
 
 
-Import Your Repository
-
-
+Controller
+______________________________
+```
 @RestController
 public class PirateController {
     @Autowired
@@ -190,5 +200,26 @@ public class PirateController {
         });
     }
 }
+```
+____________________________________
 
-____________________________________//
+
+# GLOBAL CORS CONFIG
+```
+@Configuration
+public class SpringGlobalConfig implements WebMvcConfigurer {
+
+    private static final String CORS_BASE_PATTERN = "/**";
+    private static final String ALLOWED_ORIGINS = "*";
+    private static final String ALLOWED_HEADERS = "*";
+    private static final String ALLOWED_METHODS = "*";
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping(CORS_BASE_PATTERN)
+                .allowedOrigins(ALLOWED_ORIGINS)
+                .allowedHeaders(ALLOWED_HEADERS)
+                .allowedMethods(ALLOWED_METHODS);
+    }
+}
+```
