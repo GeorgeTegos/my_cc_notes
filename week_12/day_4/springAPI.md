@@ -23,15 +23,17 @@ Spring Start ;
 1. RestController
 
 
+____________________________________
+
 com.example..... \n
 1. |- controllers
-  - |- modelController (Class)
+    - |- modelController (Class)
 
 1. |- models \n
-  - |- modelClass (Class)
+    - |- modelClass (Class)
 
 1. |- Repositories\n
-  - |- modelRepository (Interface)
+    - |- modelRepository (Interface)
 
 1. |- nameApplication
 
@@ -39,9 +41,10 @@ Resources\n
 1. |- application.properties
 
 
-Testing\n
-  |- testFiles
+1. Testing
+    - |- testFiles
 
+____________________________________
 
 
 MODEL
