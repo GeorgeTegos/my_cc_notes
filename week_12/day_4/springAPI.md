@@ -5,22 +5,22 @@ ORM -> Hibernate (JPA spec)
 
 
 Spring Start ;
-1) Spring initialiser
-  1.a)Spring Web
-  1.b)PostgreSQL Driver
-  1.c)Spring Data JpaRepository
-  1.d)SpringBoot DevTools
-2) application.properties
-    -Datasource and Postgres settings \n
-    spring.datasource.url=jdbc:postgresql://localhost:5432/{DBNAME}\n
-    spring.datasource.username=user\n
-    spring.datasource.password=\n
-    spring.jpa.hibernate.ddl-auto=update\n
-    spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect /n
-    spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true /n
-3)Models \n
-4)Repositories \n
-5)RestController \n
+1. Spring initialiser
+  - Spring Web
+  1. PostgreSQL Driver
+  1. Spring Data JpaRepository
+  1. SpringBoot DevTools
+1. application.properties
+    - Datasource and Postgres settings
+    1. spring.datasource.url=jdbc:postgresql://localhost:5432/{DBNAME}
+    1. spring.datasource.username=user
+    1. spring.datasource.password=
+    1. spring.jpa.hibernate.ddl-auto=update
+    1. spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
+    1. spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
+1. Models
+1. Repositories
+1. RestController 
 
 
 com.example.....
@@ -82,15 +82,11 @@ ______________________________
 Every Model has to be in Repository
 
 Repositories should always be Interface
-
-
-
-
-
-Repository
 ______________________________
 
 //JpaRepository is kinda like a HashMap
+
+Repository
 
 ```
 @Repository
@@ -143,7 +139,7 @@ class PirateserviceApplicationTests {
 ______________________________
 
 
-\\@Autowired  -> Dependency injection (making a "instance" for us , can be interface)
+@Autowired  -> Dependency injection (making a "instance" for us , can be interface)
 
 
 
