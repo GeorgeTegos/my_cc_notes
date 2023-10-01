@@ -6,7 +6,7 @@ ORM -> Hibernate (JPA spec)
 
 Spring Start ;
 1. Spring initialiser
-  - Spring Web
+  - Spring Web ( https://start.spring.io/ )
   1. PostgreSQL Driver
   1. Spring Data JpaRepository
   1. SpringBoot DevTools
@@ -20,7 +20,7 @@ Spring Start ;
     1. spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
 1. Models
 1. Repositories
-1. RestController 
+1. RestController
 
 
 com.example.....
