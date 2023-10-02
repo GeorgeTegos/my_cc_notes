@@ -40,9 +40,6 @@ class PirateserviceApplicationTests {
 		ship = new Ship("Boaty McBoat");
 		jack = new Pirate("Jack","Sparrow",32, ship);
 		raid1 = new Raid("Tortuga", 100);
-
-
-
 	}
 
 
