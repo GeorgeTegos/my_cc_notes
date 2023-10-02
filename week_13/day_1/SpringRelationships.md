@@ -5,20 +5,22 @@ One - To - Many
 Ship
 ____
 
+```
 @Column(name = "pirates")      
-@OneToMany(mappedBy = "ship") \n
+@OneToMany(mappedBy = "ship")
 @JsonIgnoreProperties({"ship"})   //Ignore ref to ship
 private List<Pirate> pirates;
-
+```
 
 Pirate
 ______
 
-@ManyToOne  \n
-@JoinColumn(name = "ship_id", nullable = false) \n
-@JsonIgnoreProperties({"pirates"})  \n
+```
+@ManyToOne  
+@JoinColumn(name = "ship_id", nullable = false) <br>
+@JsonIgnoreProperties({"pirates"})  
 private Ship ship;
-
+```
 
 
 
@@ -28,10 +30,10 @@ For both models
 _____________________
 
 > Raid Prospective
-
-@JsonIgnoreProperties({"raids"}) \n
-@ManyToMany \n
-@JoinTable( \n
+```
+@JsonIgnoreProperties({"raids"})
+@ManyToMany
+@JoinTable(
       1. name = "pirate_raids",
       1. joinColumns = {
               - @JoinColumn(
@@ -49,11 +51,11 @@ _____________________
        }
 )
 private List<Pirate> pirates;
-
+```
 
 
 > Pirate Prospective <
-
+```
 @ManyToMany
 @JsonIgnoreProperties({"pirates"})
 @JoinTable(
@@ -74,3 +76,4 @@ private List<Pirate> pirates;
         }
 )
 private List<Raid> raids;
+```
