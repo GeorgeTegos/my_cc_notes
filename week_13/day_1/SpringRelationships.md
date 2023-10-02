@@ -31,8 +31,13 @@ _____________________
 
 > Raid Prospective
 ```
+
+import org.hibernate.annotations.CascadeType;
+
+
 @JsonIgnoreProperties({"raids"})
 @ManyToMany
+@Cascade(CascadeType.SAVE_UPDATE)
 @JoinTable(
       1. name = "pirate_raids",
       1. joinColumns = {
@@ -56,8 +61,15 @@ private List<Pirate> pirates;
 
 > Pirate Prospective <
 ```
+
+import org.hibernate.annotations.CascadeType;
+
+
+
+
 @ManyToMany
 @JsonIgnoreProperties({"pirates"})
+@Cascade(CascadeType.SAVE_UPDATE)
 @JoinTable(
         1. name = "pirate_raids",
         1. joinColumns = {

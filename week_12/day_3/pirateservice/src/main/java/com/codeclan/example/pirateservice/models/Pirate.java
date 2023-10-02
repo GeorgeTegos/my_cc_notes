@@ -1,10 +1,13 @@
 package com.codeclan.example.pirateservice.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+
 
 //POJO
 @Entity
@@ -31,6 +34,7 @@ public class Pirate {
 //    @Column(name = "pirates")
     @ManyToMany
     @JsonIgnoreProperties({"pirates"})
+    @Cascade(CascadeType.SAVE_UPDATE)
     @JoinTable(
             name = "pirate_raids",
             joinColumns = {
