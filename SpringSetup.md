@@ -6,8 +6,8 @@ ORM -> Hibernate (JPA spec)
 
 
 Spring Start ;
-1. Spring initialiser
-    - Spring Web ( https://start.spring.io/ )
+1. Spring initialiser  ( https://start.spring.io/ )
+    - Spring Web
     * PostgreSQL Driver
     * Spring Data JpaRepository
     * SpringBoot DevTools
