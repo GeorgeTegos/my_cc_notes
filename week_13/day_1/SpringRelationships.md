@@ -6,7 +6,7 @@ Ship
 ____
 
 @Column(name = "pirates")      
-@OneToMany(mappedBy = "ship")
+@OneToMany(mappedBy = "ship") \n
 @JsonIgnoreProperties({"ship"})   //Ignore ref to ship
 private List<Pirate> pirates;
 
@@ -14,9 +14,9 @@ private List<Pirate> pirates;
 Pirate
 ______
 
-@ManyToOne
-@JoinColumn(name = "ship_id", nullable = false)
-@JsonIgnoreProperties({"pirates"}) 
+@ManyToOne  \n
+@JoinColumn(name = "ship_id", nullable = false) \n
+@JsonIgnoreProperties({"pirates"})  \n
 private Ship ship;
 
 
@@ -27,11 +27,11 @@ MANY TO MANY syntax
 For both models
 _____________________
 
-> Raid Prospective <
+> Raid Prospective
 
-@JsonIgnoreProperties({"raids"})
-@ManyToMany
-@JoinTable(
+@JsonIgnoreProperties({"raids"}) \n
+@ManyToMany \n
+@JoinTable( \n
       1. name = "pirate_raids",
       1. joinColumns = {
               - @JoinColumn(
