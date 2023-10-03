@@ -1,33 +1,36 @@
 Relationships
 
 One - To - Many
+Ship - to - Pirates
 
-Ship
-____
+______
+> Ship
 
 ```
 @Column(name = "pirates")      
 @OneToMany(mappedBy = "ship")
-@JsonIgnoreProperties({"ship"})   //Ignore ref to ship
+@JsonIgnoreProperties({"ship"})   //ignore ref to ship to avoid circular reference
 private List<Pirate> pirates;
 ```
-
-Pirate
 ______
+
+> Pirate
 
 ```
 @ManyToOne  
-@JoinColumn(name = "ship_id", nullable = false) <br>
-@JsonIgnoreProperties({"pirates"})  
+@JoinColumn(name = "ship_id", nullable = false)
+@JsonIgnoreProperties({"pirates"})  //ignore ref to pirates list to avoid circular reference
 private Ship ship;
 ```
 
 
 
+______
 
 MANY TO MANY syntax
 For both models
-_____________________
+______
+
 
 > Raid Prospective
 ```
@@ -35,29 +38,31 @@ _____________________
 import org.hibernate.annotations.CascadeType;
 
 
-@JsonIgnoreProperties({"raids"})
 @ManyToMany
+@JsonIgnoreProperties({"raids"})      // Ignore the JSON property to avoid circular reference
 @Cascade(CascadeType.SAVE_UPDATE)
 @JoinTable(
-      1. name = "pirate_raids",
-      1. joinColumns = {
-              - @JoinColumn(
-                       * name = "raid_id",    // Should be model you working at
-                       * nullable = false,
-                       *  updatable = false
+       name = "pirate_raids",     //Name of the joined Table
+
+       joinColumns = {
+               @JoinColumn(
+                       name = "raid_id",    // Column name for the current ID to join
+                       nullable = false,
+                       updatable = false
                )
        },
-      1. inverseJoinColumns = {
-               - @JoinColumn(
-                      * name = "pirate_id", // Should be the model you ref too
-                      * nullable = false,
-                      * updatable = false
+       inverseJoinColumns = {
+               @JoinColumn(
+                       name = "pirate_id",  // Column name for the joined column ID
+                       nullable = false,
+                       updatable = false
                )
        }
-)
-private List<Pirate> pirates;
+ )
+ private List<Pirate> pirates;
 ```
 
+______
 
 > Pirate Prospective <
 ```
@@ -68,22 +73,22 @@ import org.hibernate.annotations.CascadeType;
 
 
 @ManyToMany
-@JsonIgnoreProperties({"pirates"})
+@JsonIgnoreProperties({"pirates"})         // Ignore the JSON property to avoid circular reference
 @Cascade(CascadeType.SAVE_UPDATE)
 @JoinTable(
-        1. name = "pirate_raids",
-        1. joinColumns = {
-              -  @JoinColumn(
-                      *  name = "pirate_id",
-                      *  nullable = false,
-                      *  updatable = false
+         name = "pirate_raids",             // Name of the joined table
+         joinColumns = {
+                @JoinColumn(
+                        name = "pirate_id",  // Column name for the current ID to join
+                        nullable = false,
+                        updatable = false
                 )
         },
-        1. inverseJoinColumns = {
-              -  @JoinColumn(
-                      *  name = "raid_id",
-                      *  nullable = false,
-                      *  updatable = false
+         inverseJoinColumns = {
+                @JoinColumn(
+                        name = "raid_id",    // Column name for the joined column ID
+                        nullable = false,
+                        updatable = false
                 )
         }
 )
