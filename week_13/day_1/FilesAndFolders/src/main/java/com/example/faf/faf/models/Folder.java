@@ -35,6 +35,8 @@ public class Folder {
         this.files = new ArrayList<>();
     }
 
+    public Folder(){}
+
     public List<File> getFiles() {
         return files;
     }
