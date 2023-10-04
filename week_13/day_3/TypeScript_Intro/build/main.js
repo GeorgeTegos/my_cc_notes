@@ -41,3 +41,16 @@ const addTask = (name, status) => {
     console.log(`Added ${name}: ${status}`);
 };
 addTask("TypeScript", Status.INCOMPLETE);
+const rateLesson = (lessonID, rate) => {
+    console.log(`You rated ${lessonID}: ${rate}`);
+};
+rateLesson("TypeScript", 2);
+const login = (details) => {
+    console.log(`You logged in as ${details.username}`);
+};
+const user = {
+    username: "George",
+    password: "123",
+    age: 12
+};
+login(user);

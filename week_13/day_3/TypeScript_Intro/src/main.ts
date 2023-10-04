@@ -66,3 +66,71 @@ const rateLesson = (lessonID:string | number ,rate:Rating) =>{
 }
 
 rateLesson("TypeScript", 2);
+
+
+// Objects And Interfaces
+// Objects
+type UserType={
+    username: string;
+    password: string | number;
+}
+
+const login = (details: UserType) =>{
+    console.log(`You logged in as ${details.username}`)
+}
+
+const user = {
+    username:"George",
+    password:"123",
+    age: 12
+}
+
+login(user);
+
+
+// Interfaces
+interface IUser {
+    username: string;
+    password: string | number;
+}
+
+const user2: IUser = {
+    username:"jack sparrow",
+    password: "arrrr"
+};
+
+interface IEmployee extends IUser {
+    employee_id: string
+}
+
+const employee: IEmployee = {
+    username:"Employee 1",
+    password: "password",
+    employee_id: "AXX1",
+}
+
+// Generics
+
+const filter = <T> (numbers:T[], filterFunction:(num: T )=> boolean):T[] =>{
+ return numbers.filter(filterFunction);
+}
+
+const evenNumbers = filter(numbers,(num) => num %2 == 0);
+
+const words = ["snake", "Sausage", "Gareth","cabbage"]
+const wordsStartingWithS = filter(words, (word)=> word[0] == "S");
+
+interface Pair<T,U>{
+    first: T;
+    second: U;
+}
+
+const pairObj: Pair<string,string> = {
+    first: "Hello",
+    second: "World"
+}
+
+const pairObj2: Pair<number,string> ={
+    first:10,
+    second:"Hey"
+}
