@@ -15,7 +15,7 @@ public class Person {
     private Long id;
     private String name;
     @Column(name = "folders")
-    @OneToMany(mappedBy = "person")
+    @OneToMany(mappedBy = "person") // refers to person attribute in Folder model
     @JsonIgnoreProperties({"person"})
     private List<Folder> folders;
 

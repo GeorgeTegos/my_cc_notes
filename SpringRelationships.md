@@ -8,7 +8,7 @@ ______
 
 ```
 @Column(name = "pirates")      
-@OneToMany(mappedBy = "ship")
+@OneToMany(mappedBy = "ship")     // Refers to ship attribute in Pirate model
 @JsonIgnoreProperties({"ship"})   //ignore ref to ship to avoid circular reference
 private List<Pirate> pirates;
 ```
