@@ -1,0 +1,89 @@
+1. npm init
+1. npm install typescript --save-dev
+1. npx tsc --init
+
+> // tsconfig.json
+```
+"rootDir": "./src/",
+"noEmitOnError": true,
+"outDir": "./build"
+```
+_______
+Build command
+```
+npx tsc
+```
+
+_______
+
+
+```
+// Number
+let number: number = 10;
+
+// String
+let myName: string = "George";
+
+// Boolean
+let isWindy: boolean = true;
+
+// Any
+let apiResponse: any = {
+    data:{
+        "id":1,
+        "name":"George"
+    }
+}
+
+// Arrays
+let numbers:number[] = [1,2,3,4,5];
+
+
+// Type Definitions
+type FizzBuzzType = string | number;
+
+let fizzBuzz: FizzBuzzType[]= [1,2,"fizz",4,"buzz"];
+
+// Functions
+const add = (a:number ,b:number) => {
+    return a+b;
+}
+
+add(5,5);
+
+const sayHello = (name: string) =>{
+    console.log(`Hello, ${name}`)
+}
+
+sayHello("George");
+
+//                                 Return Type
+const canBuyDrink = (age: number): boolean =>{
+    return age >=18;
+}
+
+const squaredNumbers= (list: number[]) => {
+    return list.map(number => number ** 2);
+}
+
+// ENUMS
+enum Status {
+    INCOMPLETE = 0,
+    COMPLETE = 1,
+}
+
+const addTask = (name: string, status:Status) => {
+    console.log(`Added ${name}: ${status}`);
+}
+
+addTask("TypeScript",Status.INCOMPLETE);
+
+// Type Definitions 2
+type Rating = 1 | 2 | 3 | 4 | 5 ;
+
+const rateLesson = (lessonID:string | number ,rate:Rating) =>{
+    console.log(`You rated ${lessonID}: ${rate}`)
+}
+
+rateLesson("TypeScript", 2);
+```
