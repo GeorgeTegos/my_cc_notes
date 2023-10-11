@@ -15,6 +15,14 @@ let apiResponse = {
 // Arrays
 let numbers = [1, 2, 3, 4, 5];
 let fizzBuzz = [1, 2, "fizz", 4, "buzz"];
+fizzBuzz.forEach(item => {
+    if (typeof item == typeof " ") {
+        console.log("Test");
+    }
+    else {
+        console.log(typeof item);
+    }
+});
 // Functions
 const add = (a, b) => {
     return a + b;
@@ -54,3 +62,30 @@ const user = {
     age: 12
 };
 login(user);
+const user2 = {
+    username: "jack sparrow",
+    password: "arrrr"
+};
+const employee = {
+    username: "Employee 1",
+    password: "password",
+    employee_id: "AXX1",
+};
+// Generics
+const filter = (numbers, filterFunction) => {
+    return numbers.filter(filterFunction);
+};
+const evenNumbers = filter(numbers, (num) => num % 2 == 0);
+const words = ["snake", "Sausage", "Gareth", "cabbage"];
+const wordsStartingWithS = filter(words, (word) => word[0] == "S");
+const pairObj = {
+    first: "Hello",
+    second: "World"
+};
+const pairObj2 = {
+    first: 10,
+    second: "Hey"
+};
+const test = {
+    greetings: () => console.log("hello")
+};

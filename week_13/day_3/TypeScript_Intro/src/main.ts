@@ -24,6 +24,14 @@ type FizzBuzzType = string | number;
 
 let fizzBuzz: FizzBuzzType[]= [1,2,"fizz",4,"buzz"];
 
+fizzBuzz.forEach(item => {
+    if (typeof item == typeof " "){
+        console.log("-- Test -- ")
+    } else{
+        console.log(typeof item)
+    }
+})
+
 // Functions
 const add = (a:number ,b:number) => {
     return a+b;
@@ -133,4 +141,15 @@ const pairObj: Pair<string,string> = {
 const pairObj2: Pair<number,string> ={
     first:10,
     second:"Hey"
+}
+
+
+// Passing Method to 
+
+interface ITest {
+    greetings: () => void;
+}
+
+const test: ITest = {
+    greetings: ()=> console.log("hello")
 }
